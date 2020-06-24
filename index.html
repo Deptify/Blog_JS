@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog de javaScript</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" />
+        <link rel="stylesheet" href="style.css"/>
+        <script src="index.js"></script>
+    </head>
+    <body id="app">
+        <header id="header">
+            <div class="insta">
+                <h1> Blog de js: Se usara para ayudar a usauarios nuevos y contar mis experiencias</h1>
+
+            <!-- <button class="yo"></button> <a href="https://www.instagram.com/crisj_48/"> <img class="yo_2" src="./clase5/Jojo_yo.jpg" alt="referencia_5"> </button>  -->  
+            </div>
+        </header>
+
+        <main>
+           
+            <div class="wrapper">
+              
+
+                <button id="dark-mode">Study Mode</button> 
+
+                <button id= "home"> <a href="index.html"> Home </a> </button>
+
+                <button id="More"> <a href="https://twitter.com/Deptify2"> More</a></button>
+
+              
+                <h2> Segmentado por clases para una mejor comprencion del tema </h2>
+                <br>
+          
+
+                <h2> Que es javaScript</h2>
+
+                    <p>Es un lenguaje de programación interpretado orientado a objetos, imperativo y tipado lo que significa que no es estricto con sus variables </p>
+
+                <article id="clase_1">
+
+                    
+                   
+
+
+                    <h2> Clase JS01</h2>
+                    
+                    <hr>
+
+                    <p>Un lenguaje de variables, no es tipado por lo que no es estricto con sus variables, sus tipos de datos son: Strings, bool ,int float. puedes combinar palabras
+                     con números, o booleanos con letras, no se necesita usar el ; al final de cada linea de codigo, aprendimos que se llamó Javascript por marketing, 
+                     ya que en ese momento, java se estaba utilizando mucho. Algunos ejemplos de no ser tipado son estos: </p>
+
+                     <p> <b>
+                        1 + 3 = Cierto 
+                    </b></p>
+                        
+                        <p> <b>
+                            Cierto = Mario 
+
+                        </b></p>
+                        
+                            <p> <b> 
+                                1.5 + 6 = Manzana 
+                         </b></p>
+
+                         <p> Para declarar una variable se utiliza:  let Nombre = Resultado para visualizar se ocupa <b> Console.log</b></p>
+
+                         <p> Lo que mas me costo entender es el hecho de no ser tipado y que se podía no usar ; ya que podrás combinar cosas que en otros lenguajes no. </p>
+
+                </article>
+
+                <article id="clase_2">
+                    <h2> Clase JS02</h2>
+                    <hr>
+                    <p> Tiene una librería interna para poder modificar el documento de html, ya que está hecho para interactuar con elementos de páginas web. 
+                         por default tiene muchas utilidades para manipular dichas páginas.</p>
+                    
+                    <p>Es decir no se necesita una aplicación externa como mono o visual studio para controlar elementos de interfaz </p>
+
+                    <p>funcion <i class="rojo">Nombre</i> ()</p>
+                    <p> { <i class="rojo">Que hace </i> }</p>
+
+                    <p> Como ejemplo: </p>
+
+                    <p> funcion Ejemplo  </p>
+
+                    <p> let nombre = "cristopher"</p>
+
+                    <p> Console.log (nombre)</p>
+
+                    <p> Esto provoca que la función esté declarada, sin embargo de debe llamar primero:</p>
+
+                    <p>En JS también se pueden obtener referencias de html con los nombres de elementos: Button, li, text, Etc. Estos se llaman a través de funciones:</p> 
+
+
+                     <p> funcion App () {</p>  
+                       <p> let button = document.getElementById(“burger”); </p> 
+                        <p>console.log (button); </p>
+                        <p>}  </p>
+
+                        <p>Nota: recuerda usar el tag para que la función sea llamada, en este caso es burguer</p>  
+
+
+                        <p>Algo que debes saber es que el Html se lee línea por línea, por lo que seguramente tu función esté muy abajo y no se lea al principio,</p>
+                        <p>ya que a un no esta cargada. ¿Como resolvemos esto? </p>
+
+                        <p> ¡ addEventListener! Que recibe de parámetro un string <i class="rojo"> (Texto) </i> que tendrá en si mismo un evento del programa: Click, 
+                        done,DOMContentloaded, etc, después las repasamos por lo que queda: </p>
+
+                        <p>document.addEventListener(“DOMContentloaded”,App ); </p>
+
+
+                        <p> Si quieres cambiar el contenido debes tener primero la referencia, Js consideremos que todo es un objeto, así que para acceder se usa la notación de . </p> 
+
+
+                        <p> button.  textContent  <i class="rojo"> (lo que queremos acceder) </i>=  “Cristopher” <i class="rojo"> (por lo que le queremos cambiar) </i>  </p>
+
+                        <p> Cuando intentemos correr esta línea debemos ser conscientes que también debe tener una función con sus parámetros y lo que estamos llamando, así mismo, </p>
+                        <p>debe estar dentro de la función : </p>
+
+                        <p>funcion App () </p>
+                        <p>{ </p>
+                        <p> console.log(“document  loaded); <i class="verde"> (Checamos que cargó el documento) </i></p>
+
+                        <p> let<i class="rojo"> (variable) </i> button <i class="rojo"> (elemento html) </i> = document <i class="rojo">(donde) </i> .
+                            getElementById <i class="rojo"> (Que voy a tomar)</i>  (“burger”)<i class="rojo">  (tag de html)</i>  </p>
+
+                        <p>button (elemento html).addEventListener(“click”, ToggleButton); (Función declarada) </p>
+                        <p>console.log(Button); (Checa que la función corra); </p>
+
+                        <p>función ToggleButton <i class="rojo"> (Función declarada)</i> () { </p>
+                        <p> button.textContent =  “hola”; <i class="rojo"> (por que va a cambiar)</i>;</p>
+                        <p>} </p>
+                        <p> }</p>
+
+                        <p> document.addEventListener(“DOMContentLoaded” , app); <i class="rojo"> (cuando DOM <i class="verde" > (asi sellama el archivo de HTML) </i>
+                            cargue por completo muéstrame esto) </i> </p>
+                        
+
+                        <p> Aprendí que puedes reutilizar funciones si las tienes declaradas antes de la función donde se llaman  </p>
+
+                        <p>función ToggleButton <i class="rojo"> (Función declarada) </i> () { </p>
+                        <p> button.textContent =  “hola”; <i class="rojo">(por que va a cambiar) </i>; </p>
+                        <p> } </p>
+
+                        <p> fuera de App en este caso o fuera de donde se llama en casos extra.</p>
+
+                        <p> Lo que más trabajo me costó fue entender que es el DOM, saber a qué elemento entrar y lo que iba a obtener, no recordaba que para ser 
+                            llamados se debía usar su tag de html o css </p>
+
+
+
+
+                </article>
+
+                <article id="clase_3">
+                    <h2> Clase Todo 01 </h2>
+                   
+
+                    <p> Para correr una función debes declarar primero, además de comprobar que el archivo JS está cargado, esto se hace con DOm
+                         como lo vimos en la clase anterior. </p>
+
+                    <p> Cuando haya una función declarada además de “Click” se puede poner una función que se ejecute en el momento que se aplique la acción declarada:</p>
+
+                    <p> funcion Dang () <i class="rojo"> (función que llamaremos) </i></p>
+
+                    <p> { </p>
+
+                    <p> console,log (“pium”);  <i class="verde">(va a checar en la consola que este bien declarada y dira pium) </i></p>
+
+                    <p>  }</p>
+
+                    <p>  funcion App () <i class="rojo"> (Aquí llamaremos a dicha función )</i> </p>
+
+                    <p> { </p>
+
+                    <p> t dangButton = document.getElementById <i class="rojo"> (Que ID va a tomar) </i>  = (“Dang”)  <i class="rojo"> ( html id);</i>
+                        dangButton.addEventListener (“Click”, Dang); <i class="verde">  llamamos a la función declarada anteriormente)  </i> </p>
+
+                    <p> Aprendimos a como obtener todo un elemento de html de manera sencilla :</p>
+
+                    <p>let el <i class="rojo">(elemento) </i> = document <i class="rojo"> (de donde va a tomar) </i>.getElementById<i class="rojo">(Tomará un id) </i>  (“App”)
+                        <i class="verde">(nombre de html) </i>  </p>
+
+                    <p> 
+                        Así mismo le podemos agregar parametros de css:</p>
+
+                    <p> el.classList <i class="rojo">(elemento de clase) </i>. toggle <i class="rojo">(cambia a ) </i> (“-patas”); <i class="rojo">(Css parámetro) </i>
+                         <i class="verde">(básicamente cambia esto por este elemento de css) </i> 
+                        Así como podemos tomar ID podemos tomar elementos clase todo esto con la función getElementsByClassName(“ ”); </p>
+                    
+                    <p> 
+                        Así que todos lo que tengan esta clase van a ser editados con parámetros otorgados en css, html o ambas. 
+                         Cuando queremos seleccionar un elemento específico de la tasklist solo se necesita usar corchetes duros y el número del elemento [0]  </p>
+
+                    <p> Lo que mas me gusto fue entender el cómo funcionaba el css dentro de js, a un que a un se me dificulta como otorgarle parámetros para
+                         que se cambien cuando se llama a click u otras instancias </p>
+
+                    
+
+
+                </article>
+
+                <article id="clase_4">
+                    
+                    <h2> Clase Agregar y eliminar elementos  </h2>
+                    
+                    <p> Debemos entender que las paginas de internet se recargan cuando mandas un formulario en html (input type text) debemos hacer que no suceda
+                        eso para que la página reciba la información que necesitamos . ¿cómo lo evitamos ? </p> 
+                    <p> función Evitar (event) () { </p>
+
+                    <p> event.preventDefault(); <i class="verde">(esto evita que suceda ) </i> </p>
+                    <p> let form = event.target; </p>
+                    <p> console.log(form);</p>
+                    <p> } </p> 
+
+                    <p> Ya que la forma solo vive en contexto de la función definida por eso es que debe ser especificada en las líneas de texto. </p> 
+
+                    <p>  Es importante saber el valor de tu texto ya así reemplazamos su valor para darle una nueva tarea. </p>
+
+                    <img src="./clase5/1.PNG" alt="referencia_1">
+
+                    <p> Existe una variación llamada querySelectorAll que toma todos los elementos con el mismo nombre. Retomando el tema anterior solo reemplacemos: </p> 
+
+                    <p> console.log (input.value)  </p> 
+
+                    <p> así como podemos instanciar valores podemos crear elementos, createElement servirá para crear nuevos elementos taggeados de html  </p> 
+
+                    <p> let new task = document.createElement(“ul”) <i class="verde"> (elemento nuevo a crear, tendrá valores estándar a menos que le crees una función en css. </i>
+                    </p> 
+                    <p> sin embargo debemos instanciarlo, como hemos aprendido las cosas se nombran pero no se llaman por lo que se requiere de otra funcion, aqui 
+                        dejare un ejemplo completo de como se podría usar: </p> 
+
+                        <img src="./clase5/2.PNG" alt="referencia_2">
+
+
+                    <p> Como ya hemos aprendido podrías crearle más elementos desde el texto, hasta una propiedad del DOM. </p> 
+
+                    <p> Así como podemos agregar podemos eliminar, solo necesitamos el elemento remove  </p> 
+
+                    <p> funcion deleteEjemplo (event) { </p> 
+                    <p> let task = event.target; </p>
+                    <p>task.remove (); }  </p>
+
+                    <p> Solo debemos llamarla en donde la queramos usar con los parámetros aprendidos en el curso </p>
+
+                    <p> Este ejercicio tiene bastante complejidad al momento de entender cómo es que las paginas usan el refresh, el hecho de 
+                        llamar y ejecutar funciones lo hace complicado ya que piensas que con una vez basta </p>
+
+
+                    
+
+                </article>
+
+                <article id="clase_5">
+                    <h2> Clase Como remover tareas </h2>
+
+                    <p> En esta clase aprenderemos la importancia de remove, remove puede ser utilizada para todos los elementos y parametros de
+                        Html y css. Eliminar instancias y si se nombra la funcion   </p>
+
+                    <p>Para lograr esto debemos localizar en donde esta el parametro a eliminar accediendo a el task.remove ()(donde esta)   </p>
+
+                    <p> Podemos eliminar li, ul, br, hr, demas elementos con esta sensilla funcion, tambien el eliminar instancias completas  </p>
+
+                    <p>  funcion delete (event) {</p>
+
+                    <p> let task = event.target; </p>
+                    <p> task remove (App); }</p>
+
+                    <p> Me costo mucho trabajo que en principo parece facil usar remove, pero puede hacer mas cosas de las que crees, mal instanciada
+                        podria borrarlo todo </p>
+
+
+                </article>
+
+                <article id="clase_6">
+                    <h2>Clase Todo Render </h2>
+                    <p> Aprenderemos cómo duplicar funciones con método distinto ya que lo ideal es tener el contenido por aparte para tener un mejor render y 
+                        como se muestra en pantalla.</p> 
+                    <p> Lo que haremos será salvar el texto para que el navegador no las borre cuando uses un refresh al enviar un texto etc.</p>
+
+                    <p>Algo que no habíamos visto es que podemos meter una función dentro de otra función, lo que ayuda, es tener una variable en tu scope,
+                     así que puedes acceder a la misma  y llamarla en una sola.</p>
+
+                    <p>función dobleFuncion{ </p>
+
+                    <p>let taskList= [“hola”, “como estas”] <i class="verde">(esta es la funcion que quiero tener dentro de la siguiente) (los corchetes duros
+                         pueden ser un arreglo vacío) </i></p>
+                    <p>let taskListElement = document.querySelector(“.task-list”); <i class="rojo"> (Elemento que vas a seleccionar)</i> </p>
+                    <p> let segundaFuncion = document.getElementById(“add-task”);  <i class="rojo">(seteamos que funcion llamar) </i></p>
+                    <p> segundaFuncion.addEventListener(“submit”,parámetro x <i class="verde">(cuando quieras que suceda, esto será llamado en otra función) );
+                        (Nos dice que es lo que va a hacer y cuando) </i>); </p>
+
+                    <p> funcion segundaFuncion (task){<i class="verde"> (estamos llamando a nuestra función dentro de “ dobleFuncion”)</i>{ </p>
+                    <p> taskList.push (task) </p>
+                    <p> Ejemplo (); <i class="verde"> (cada que  suceda la acción indicada en el parámetro anterior se ejecutara el parámetro actual) </i> </p>
+
+                    <p> funcion Ejemplo(){ </p>
+                    <p>console.log(Ejemplo) <i class="rojo">(revisa que funcione)</i> </p>
+                    <p> } </p>
+                    <p> Lo que hace que todo esto funcione es un nuevo parametro llamado innerHTML que te regresa un string , debemos cambiar las “” por comillas de template literals ´´
+                        eso hará que puedas tener todas las líneas que necesites: </p> 
+
+                    <p>uncion segundaFuncion (task){ <i class="verde"> (estamos llamando a nuestra función dentro de “ dobleFuncion”) </i> { </p>
+                    <p> taskList.push (task) </p>
+                    <p> Ejemplo (); (cada que  suceda la acción indicada en el parámetro anterior se ejecutará el parámetro actual) </p>
+
+                   <img src="./clase5/3.PNG" alt=" Ejemplo 3">
+
+                   <p>  Generemos un template configurado para cuando se haga Render, para que cada tarea tenga un elemento de la lista </p>
+
+
+
+
+                </article>
+
+                <article id="clase_7">
+                    <h2> Clase Todo sort </h2>
+
+                    <p>Objetos y arreglos, han sido mencionados dentro del blog, pero en esta ocasión se tocaran a fondo, sera como un diccionario, 
+                        debemos entender que todo dentro de JS son objetos, por lo que todo tiene una propiedad y una función</p> 
+                    <p> let Objeto = {</p> 
+                    <p> Peso: “100 kg”;</p> 
+                    <p> Color: “Morado”;</p> 
+                    <p>Ponchada= falso; </p> 
+                    <p> }</p> 
+
+                    <p> console.log(Objeto); <i class="rojo">(puede usarse objeto .Peso, Color; Etc, para obtener un data específico)</i> </p>
+
+                    <p> Aprenderemos sobre la palabra this para explicartela de mejor manera veamos esto: </p>  
+
+                    <p>función getFullName(){  </p> 
+                    <p>return this.name + this.lastName;<i class="verde"> (aplicacion para this en este caso, que quiero obtener de este ejercicio) </i> </p> 
+                    <p> } </p> 
+
+                    <p>let Person = { </p> 
+                    <p> Name: ”Cristopher”.</p> 
+                    <p>Age: “22”. </p> 
+                    <p> Cool: true,</p> 
+                    <p> Lastname: “Castillo”;</p> 
+                    <p> getFullName: getFullName<i class="rojo">( llamo a mi función) </i> </p> 
+                    <p> };</p> 
+
+                    <p>console.log(persona.getFullName();<i class="rojo">(muéstrame lo que obtuve); </i>  </p> 
+
+                    <p> This funciona sin importar donde lo usas, se aplica cuando lo llamas,
+                         por lo que puedes obtener todos los nombres que quieras si agregamos más funciones, entrara a sus parámetros. </p> 
+
+                    <p>Lo más difícil fue que el date no me funciona, lo creo y seteo pro no logro hacer que me de la fecha del momento en que la cree</p>
+
+
+                   
+                    
+
+
+                </article>
+
+                <article id="clase_8">
+                    <h2> Clase save & filter </h2>
+
+                   <p>Vamos a crear una funcion que te indicará cuando termines todas tus tareas por hacer así que primero crea una función que se
+                    llame sin tareas y dentro del mismo que te setée, un párrafo donde te felicite. </p> 
+
+                   <p>Así que primero debemos comprobar que el lago de tus tareas sea 0, tasklist.length == 0 </p> 
+                    
+                   <p>Nos vamos a apoyar con una función que agrega tareas y la función push que vimos previamente, esta es la que modificara el largo de nuestra
+                    lista y comprobará cuando su longitud sea de 0 </p> 
+                    
+                   <p>tambien podriamos hacer que cambie con propiedades de css cuando termines, en el momento de render puedes llamar a una funcion para que cambie
+                    de color, asi cuando llegues a 0 te dirá felicidades y cambiará el diseño, solo debes meter una variable que llame al css </p> 
+                    
+                    <p>Lo que se me hizo más difícil de la clase fue poner filtros para que busquen tus tareas, la verdad es que yo no lo logre </p>
+                    
+
+
+                </article>
+
+                <form id="add-task" action="">
+                    <input type="text" placeholder="Que debo repasar" required>
+                    <button id="clear" type="submit"> Añadir</button>
+                </form>
+
+               
+                <ul class="task-list">
+                    
+                    <li class="task-item ">
+                        <span class="task-text"> Declarar variables </span>
+                         <button class="task-delete"> - </button> 
+                    </li>
+
+                    <li class="task-item ">
+                        <span class="task-text"> Cisualizar un hola</span>
+                         <button class="task-delete"> - </button> 
+                    </li>
+
+                    <li class="task-item ">
+                        <span class="task-text"> Repasar </span>
+                         <button class="task-delete"> - </button> 
+                    </li>
+
+                    <li class="task-item ">
+                        <span class="task-text"> Llamar una variable de html en js </span>
+                         <button class="task-delete"> - </button> 
+                    </li>
+                   
+                </ul>
+
+                <section id="task-list">
+                    <div class="task-empy">
+                        <h2> Acabaste el blog :D</h2>
+                        <p> >:( Ahora has uno tuyo</p>
+                    </div>
+                </section>
+        </main>
+        <footer id="footer">
+
+            <div class="foot">
+
+                <span>Creado por  <a href="https://twitter.com/Deptify2">Deptify</a></span>
+            </div>
+        </footer>
+    </body>
+    </html>
